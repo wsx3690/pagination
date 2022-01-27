@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>頁碼範例</title>
+  <link rel="stylesheet" href="./pagination.css">
+</head>
+<body>
+  <div class="search-result">
+    <!-- 搜尋結果筆數大於零 -->
+    <section class="search-summary">
+      <div>
+        <span class="result">搜尋結果</span>
+        <span class="total">總計</span>
+        <span class="number paperCount">0</span>
+        <span>份試卷，</span>
+        <span class="number questionCount">0</span>
+        <span>題試題</span>
+      </div>
+      <div>
+        <span class="limited-text">每頁顯示</span>
+        <select class="limited">
+          <option value="10" selected="">10</option>
+          <option value="20">20</option>
+        </select>
+        <span class="limited-text">份</span>
+      </div>
+    </section>
+
+    <!-- 搜尋結果筆數為零者 -->
+    <section class="search-summary no-result d-none">
+      <div>
+        <span class="result">搜尋結果</span>
+        <span>此條件下無搜尋結果</span>
+      </div>
+    </section>
+    
+
+    <section class="search-list">
+      <!-- 內容動態渲染區 -->
+    </section>
+
+
+    <!-- 頁碼 -->
+    <div>
+    <!-- 頁碼動態渲染區 -->
+      <ul class="pagination d-flex">
+        <li class="page-item first-page page-item-disable">
+        <a>
+        <img class="disabled" src="/image/pageArrow-first-disabled.svg" alt="最前頁">
+        <img src="/image/pageArrow-first.svg" alt="最前頁">
+        </a>
+        </li>
+        <li class="page-item prev-page page-item-disable">
+        <a>
+        <img src="/image/pageArrow-prev.svg" alt="前一頁">
+        <img class="disabled" src="/image/pageArrow-prev-disabled.svg" alt="前一頁">
+        </a>
+        </li>
+        <li data-page="1" class="page page-item page-item-active "><a class="page-link">1</a></li><li data-page="2" class="page page-item  "><a class="page-link">2</a></li><li data-page="3" class="page page-item  "><a class="page-link">3</a></li><li data-page="..." class="page page-item  page-link-dots"><a class="page-link">...</a></li><li data-page="6" class="page page-item  "><a class="page-link">6</a></li>
+        <li class="page-item next-page">
+        <a>
+        <img src="/image/pageArrow-next.svg" alt="下一頁">
+        <img class="disabled" src="/image/pageArrow-next-disabled.svg" alt="下一頁">
+        </a>
+        </li>
+        <li class="page-item last-page">
+        <a>
+        <img src="/image/pageArrow-last.svg" alt="最後一頁">
+        <img class="disabled" src="/image/pageArrow-last-disabled.svg" alt="最後一頁">
+        </a>
+        </li>
+      </ul>
+    </div>
+  </div>  
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="./pagination.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+/* 頁碼 */
+.d-flex{
+  display: flex;
+}
+.d-none{
+  display: none;
+}
+.pagination {
+  justify-content: center;
+  margin: 20px auto 50px;
+}
+
+.page-item {
+  min-width: 30px;
+  height: 30px;
+  background: #eaf4fe;
+  border-radius: 3px;
+  margin: 0px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.page-item img.disabled {
+  display: none;
+}
+.page-item-disable img {
+  display: none;
+}
+.page-item-disable img.disabled {
+  display: block;
+}
+
+.page-item-active {
+  background: #aad4fb;
+}
+
+.page-item-disable {
+  background: #f3f3f3;
+  cursor: unset;
+  pointer-events: none;
+}
+
+.page-link {
+  color: #556a7e;
+  display: contents;
+}
+
+.page-link-dots {
+  width: 30px;
+  height: 30px;
+  margin: 0px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: unset;
+  background: unset;
+  pointer-events: none;
+}
